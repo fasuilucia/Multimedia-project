@@ -10,6 +10,11 @@
 <body>
     <div class="container text-center">
         <h1> Jigsaw Puzzle Game </h1>
+
+        <audio id="congratulationSound" preload="auto">
+            <source src="https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3" type="audio/mpeg">
+        </audio>
+
         <div class="grid">
             <div class="cell"> </div>
             <div class="cell"> </div>
@@ -41,6 +46,17 @@
         <button class="btn btn-danger" id="give-up">Give Up</button>
         </div>
     </div>
+
+        <div class="popupBox" id="customAlert">
+            <div class="customAlertBox">
+                <div class="customAlertMessage">
+                        🎉 Congratulations! 🎉 <br>
+                        You have completed the puzzle. 
+                </div>
+                <button class="customOKButton" onclick="closeCustomAlert()">OK</button>
+            </div>
+        </div>
+
     <script src="script.js"></script>
 </body>
 </html>

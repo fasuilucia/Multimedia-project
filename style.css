@@ -1,32 +1,50 @@
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    z-index: -1;
+}
+
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 75px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    position: relative;
+    user-select: none;
+    /* Prevent text selection during drag */
 }
 
 h1 {
-  margin-bottom: 150px;
-  text-align: center;
-  font-family: Georgia;
-  font-style: italic;
-}
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 5px;
-    margin: 0 auto;
-    width: max-content; 
+    text-align: center;
+    font-family: Georgia;
+    font-style: italic;
+    margin-bottom: 30px;
+    text-shadow: #2f2d48 2px 2px 4px;
+    color: #4b83a5;
+    font-size: 50px;
 }
 
-.cell{
-    width: 100px;
-    height: 100px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 125px);
+    grid-template-rows: repeat(3, 125px);
+    gap: 3px;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.cell {
+    width: 125px;
+    height: 125px;
     background-color: #c495b9;
-    border:1px solid black;
+    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,11 +59,11 @@ h1 {
     margin-top: 30px;
 }
 
-.piece{
-    width: 100px;
-    height: 100px;
-    /* background-color: #95b2c4; */
-    border:1px solid black;
+.piece {
+    width: 125px;
+    height: 125px;
+    background-color: #95b2c4;
+    border: 1px solid black;
     display: flex;
     background-repeat: no-repeat;
     align-items: center;
@@ -56,7 +74,7 @@ h1 {
 }
 
 .popupBox {
-  position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -70,59 +88,59 @@ h1 {
 }
 
 .popupBox.show {
-  display: flex;
+    display: flex;
 }
 
 .customAlertBox {
-  background: white;
-  border-radius: 10px;
-  padding: 0px;
-  min-width: 300px;
-  max-width: 400px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  animation: alertSlideIn 0.3s ease-out;
+    background: white;
+    border-radius: 10px;
+    padding: 0px;
+    min-width: 300px;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: alertSlideIn 0.4s ease-out;
 }
 
 .customAlertMessage {
-  padding: 32px 24px;
-  font-size: 16px;
-  line-height:1.6;
-  color: #2f2d48;
-  text-align: center;
-  border-bottom: 1px solid #e2e8f0;
-  font-family: Georgia;
+    padding: 32px 24px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2f2d48;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    font-family: Georgia;
 }
 
 .customOKButton {
-  width: 100%;
-  padding: 16px;
-  background: transparent;
-  border: none;
-  font-size: 16px;
-  color: #667eea;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 0 0 10px 10px;
-  transition: background 0.2s ease-in-out;
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #667eea;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+    transition: background 0.2s ease-in-out;
 }
 
 .customOKButton:hover {
-  background: #dff2ff;
+    background: #dff2ff;
 }
 
 .customOKButton:active {
-  background: #c8e3ff;
+    background: #c8e3ff;
 }
 
 @keyframes alertSlideIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
 
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
